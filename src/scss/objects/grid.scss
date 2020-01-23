@@ -1,0 +1,132 @@
+.#{$prefix}-g-grid {
+  width: calc((100% - (#{map-get($grid--margins, 'x')} * 2)) + (#{map-get($grid--gutters, 'x')} * 2));
+  max-width: $grid--max-width;
+  padding-top: map-get($grid--gutters, 'x');
+  padding-right: map-get($grid--gutters, 'x');
+  margin: 0 auto;
+  font-size: 0;
+
+  @each $point, $break in $mq--classes {
+    @media screen and (max-width: $break) {
+      width: calc((100% - (#{map-get($grid--margins, $point)} * 2)) + (#{map-get($grid--gutters, $point)} * 2));
+      padding-top: map-get($grid--gutters, $point);
+      padding-right: map-get($grid--gutters, $point);
+    }
+  }
+
+  @media screen and (max-width: $mq--desktop) {
+    max-width: 960px + map-get($grid--gutters, 'd');
+  }
+
+  @media screen and (max-width: $mq--tablet) {
+    max-width: 703px + map-get($grid--gutters, 't');
+  }
+
+  @media screen and (max-width: $mq--mobile) {
+    max-width: none;
+  }
+
+  &::after,
+  &::before {
+    content: '';
+    display: table;
+    line-height: 0;
+  }
+
+  &::after {
+    clear: both;
+  }
+
+  .#{$prefix}-g-grid {
+    width: calc(100% + #{map-get($grid--gutters, 'x')});
+    padding-top: 0;
+    padding-right: 0;
+    margin-left: -#{map-get($grid--gutters, 'x')};
+    margin-bottom: -#{map-get($grid--gutters, 'x')};
+
+    @each $point, $break in $mq--classes {
+      @media screen and (max-width: $break) {
+        width: calc(100% + #{map-get($grid--gutters, $point)});
+        margin-left: -#{map-get($grid--gutters, $point)};
+        margin-bottom: -#{map-get($grid--gutters, $point)};
+      }
+    }
+  }
+
+  & + {
+    padding-top: 0;
+  }
+}
+
+.#{$prefix}-g-grid--full {
+  &.#{$prefix}-g-grid--full {
+    @extend .#{$prefix}-g-grid;
+
+    width: calc(100% + #{map-get($grid--gutters, 'x')});
+    max-width: none;
+    padding-right: 0;
+    margin-left: -#{map-get($grid--gutters, 'x')};
+
+    @each $point, $break in $mq--classes {
+      @media screen and (max-width: $break) {
+        width: calc(100% + #{map-get($grid--gutters, $point)});
+        margin-left: -#{map-get($grid--gutters, $point)};
+      }
+    }
+  }
+}
+
+[class*='#{$prefix}-g-column'] {
+  display: inline-block;
+  padding-left: map-get($grid--gutters, 'x');
+  padding-bottom: map-get($grid--gutters, 'x');
+  font-size: 1.8rem;
+  vertical-align: top;
+
+  @each $point, $break in $mq--classes {
+    @media screen and (max-width: $break) {
+      padding-left: map-get($grid--gutters, $point);
+      padding-bottom: map-get($grid--gutters, $point);
+    }
+  }
+
+  @media screen and (max-width: $mq--mobile) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@for $i from 1 through $grid--max-columns {
+  .#{$prefix}-g-column-#{$i},
+  .#{$prefix}-g-column-#{$i}\@x {
+    width: $i / $grid--max-columns * 100%;
+  }
+
+  .#{$prefix}-g-offset-#{$i} {
+    margin-left: $i / $grid--max-columns * 100%;
+  }
+
+  .#{$prefix}-g-offset-0 {
+    margin-left: 0;
+  }
+
+  @each $point, $break in $mq--classes {
+    .#{$prefix}-g-column-#{$i}\@#{$point} {
+      @media screen and (max-width: $break) {
+        width: $i / $grid--max-columns * 100%;
+      }
+    }
+
+    .#{$prefix}-g-offset-#{$i}\@#{$point} {
+      @media screen and (max-width: $break) {
+        margin-left: $i / $grid--max-columns * 100% !important;
+      }
+    }
+
+    .#{$prefix}-g-offset-0\@#{$point} {
+      @media screen and (max-width: $break) {
+        margin-left: 0 !important;
+      }
+    }
+  }
+}

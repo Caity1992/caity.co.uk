@@ -1,0 +1,9 @@
+---
+
+title: My Web Page
+
+description: Description of my site
+
+canonicalUrl: https://example.com
+
+robots: noindex,nofollow,noimageindex

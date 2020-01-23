@@ -1,0 +1,80 @@
+---
+layout: default.base.page
+---
+
+<div class="tm-c-body">
+
+  <div class="tm-c-hero tm-g-grid tm-u-block">
+    <div class="tm-g-column-12">
+      <h1>{{ site.data.content.title.heading | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
+      <h2>{{ site.data.content.title.tagline | markdownify | remove: "<p>" | remove: "</p>" }}</h2>
+    </div>
+  </div>
+  
+  <div class="tm-c-content">
+    {% for body in site.data.content.body %}
+      <div class="tm-c-content__fragment tm-g-grid tm-u-block">
+        <div class="tm-g-column-8 tm-g-column-10@t tm-g-column-12@m tm-g-offset-2 tm-g-offset-1@t tm-g-offset-0@m">
+          {% for content in body  %}
+            {% case content.type %}
+              {% when 'paragraph' %}
+                <div class="tm-c-content__paragraph">
+                  {{ content.content | markdownify | remove: "<p>" | remove: "</p>" }}
+                </div>
+              {% when 'subheading' %}
+                <h3 class="tm-c-content__subheading">
+                  {{ content.content | markdownify | remove: "<p>" | remove: "</p>" }}
+                </h3>
+            {% endcase %}
+          {% endfor %} 
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  
+  <div class="tm-c-footer">
+    <div class="tm-g-grid--full tm-c-footer__flex">
+      <div class="tm-g-column-3 tm-g-column-12@t">
+        <div class="tm-c-footer__content tm-c-footer__content--left">{{ site.data.footer.content.left }}</div>
+      </div>
+      <div class="tm-g-column-6 tm-g-column-12@t">
+        <div class="tm-g-grid--full">
+          <div class="tm-g-column-4 tm-g-column-12@t">
+            <div class="tm-c-footer__social">
+              <a href="{{ site.data.footer.social.mobile.link }}">
+                <div class="tm-c-footer__socialIcon">
+                  <img src="/assets/img/mobile.svg" />
+                </div>
+                <div class="tm-c-footer__socialLabel">{{ site.data.footer.social.mobile.label }}</div>
+              </a>
+            </div>
+          </div>
+          <div class="tm-g-column-4 tm-g-column-12@t">
+            <div class="tm-c-footer__social">
+              <a href="{{ site.data.footer.social.email.link }}" target="_blank">
+                <div class="tm-c-footer__socialIcon">
+                  <img src="/assets/img/email.svg" />
+                </div>
+                <div class="tm-c-footer__socialLabel">{{ site.data.footer.social.email.label }}</div>
+              </a>
+            </div>
+          </div>
+          <div class="tm-g-column-4 tm-g-column-12@t">
+            <div class="tm-c-footer__social">
+              <a href="{{ site.data.footer.social.linkedin.link }}" target="_blank">
+                <div class="tm-c-footer__socialIcon">
+                  <img src="/assets/img/linkedin.svg" />
+                </div>
+                <div class="tm-c-footer__socialLabel">{{ site.data.footer.social.linkedin.label }}</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tm-g-column-3 tm-g-column-12@t">
+        <div class="tm-c-footer__content tm-c-footer__content--right">{{ site.data.footer.content.right }}</div>
+      </div>
+    </div>
+  </div>
+
+</div>

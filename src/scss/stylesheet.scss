@@ -1,0 +1,56 @@
+/*
+  Name:    @liamhowell/caity.co.uk
+  Authors: Liam Howell <https://liam.codes>
+  Version: 1.0.0
+*/
+
+// Settings
+// Used with preprocessors and contain font, colors definitions, etc
+@import 'settings/container';
+@import 'settings/custom';
+@import 'settings/grid';
+@import 'settings/mq';
+@import 'settings/palette';
+@import 'settings/prefix';
+@import 'settings/typography';
+
+// Tools
+// Globally used mixins and functions.
+
+// Placeholders
+// Defined styles that are to be extended into other styles
+
+// Animations
+// Animation keyframes
+
+// Generic
+// Reset and/or normalize styles, box-sizing definition, etc.
+@import 'generic/box-sizing';
+@import 'generic/reset';
+@import 'generic/selection';
+@import 'generic/typefaces';
+@import 'generic/typography';
+
+// Elements
+// Styling for bare HTML elements (like H1, A, etc.).
+// These come with default styling from the browser so we can redefine them here
+@import 'elements/body';
+
+// Objects
+// Class-based selectors which define undecorated design patterns,
+// for example media object known from OOCSS
+@import 'objects/grid';
+
+// Components
+// Specific UI components. This is where majority of our work takes place and
+// our UI components are often composed of Objects and Components
+@import 'components/body';
+@import 'components/content';
+@import 'components/footer';
+@import 'components/hero';
+
+// Utilities
+// Utilities and helper classes with ability to override anything
+// which goes before it in the triangle, eg. hide helper class
+@import 'utilities/block';
+@import 'utilities/spacing';

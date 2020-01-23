@@ -1,0 +1,15 @@
+// Media Queries
+// ----------------------------------------
+
+$mq--mobile: 767px;
+
+$mq--tablet: 1023px;
+
+$mq--desktop: 1439px;
+
+$mq--classes: (
+  'm': $mq--mobile,
+  't': $mq--tablet,
+  'd': $mq--desktop
+);
+

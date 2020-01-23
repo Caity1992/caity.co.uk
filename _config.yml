@@ -1,0 +1,32 @@
+# Jekyll configuration
+# ----------------------------------------
+
+source: .
+
+destination: ./dist
+
+collections_dir: .
+
+plugins_dir: ./src/plugins
+
+layouts_dir: ./src/layouts
+
+data_dir: ./src/data
+
+includes_dir: ./src/includes
+
+sass:
+  sass_dir: ./src/scss
+  style: compressed
+  
+exclude: [
+  "CNAME",
+  "Gemfile",
+  "Gemfile.lock",
+  "src",
+  "node_modules",
+  "vendor/bundle/",
+  "vendor/cache/",
+  "vendor/gems/",
+  "vendor/ruby/"
+]
