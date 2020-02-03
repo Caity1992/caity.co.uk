@@ -1,7 +1,7 @@
 .#{$prefix}-c-footer {
   width: 100%;
   max-width: 1366px;
-  padding: 40px 20px 60px;
+  padding: 10px 0 20px;
   margin: 0 auto;
   border-top: 2px solid $palette--tahiti-gold;
   
@@ -9,10 +9,18 @@
     max-width: 95%;
   }
   
+  @at-root #{&}__container {
+    background-color: $palette--parchment;
+    padding: 30px 20px;
+  }
+  
   @at-root #{&}__flex {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    
+    @media screen and (max-width: $mq--tablet) {
+      flex-wrap: wrap;
+    }
   }
   
   @at-root #{&}__content {
@@ -41,6 +49,29 @@
     a {
       text-decoration: none;
       color: $palette--black;
+      position: relative;
+      top: 10px;
+      
+      &:hover {
+        img {
+          position: relative;
+          top: -4px;
+          
+          @media screen and (max-width: $mq--tablet) {
+            top: 0;
+          }
+        }
+        
+        [class*="__socialLabel"] {
+          padding-bottom: 5px;
+          border-color: $palette--tahiti-gold;
+          
+          @media screen and (max-width: $mq--tablet) {
+            padding-bottom: 0;
+            border-color: $palette--transparent;
+          }
+        }
+      }
     }
   }
   
@@ -54,10 +85,22 @@
     img {
       width: 100%;
       height: 100%;
+      position: relative;
+      top: 0;
+      transition: top 0.15s linear;
     }
   }
   
   @at-root #{&}__socialLabel {
     font-weight: 600;
+    display: inline-block;
+    border-bottom: 3px solid $palette--transparent;
+    padding-bottom: 10px;
+    transition: padding-bottom 0.15s linear, border-color 0.15s linear;
+    
+    @media screen and (max-width: $mq--tablet) {
+      padding-bottom: 0;
+      transition: none;
+    }
   }
 }

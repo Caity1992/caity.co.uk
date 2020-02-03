@@ -1,8 +1,12 @@
 ---
-  
+
+content:
+  left: I am currently available for consultancy and contract work. Please get in touch if you have any questions!
+  right: I would like to pay my respects to the traditional owners, Elders past and present, and Indigenous Elders of other communities of the land on which I live, work and play.
+
 social:
   mobile:
-    label: +44 7111111111 
+    label: +44 7111111111
     link: +44 7111111111
 
   email:
@@ -11,8 +15,4 @@ social:
 
   linkedin:
     label: Connect on LinkedIn
-    link: example@example.com
-
-content:
-  left: I am currently available for consultancy and contract work. Please get in touch if you have any questions!
-  right: I would like to pay my respects to the traditional owners, Elders past and present, and Indigenous Elders of other communities of the land on which I live, work and play.
+    link: https://example.com

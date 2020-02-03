@@ -21,38 +21,38 @@
   h2 {
     font-weight: 600;
     font-size: 36px;
-    
+
     @media screen and (max-width: $mq--tablet) {
       font-size: 26px;
     }
-    
+
     @media screen and (max-width: $mq--mobile) {
       font-size: 16px;
     }
-    
+
     a {
       pointer-events: none;
       color: $palette--black;
       text-decoration: none;
     }
-    
+
     [href="#highlight-green"] {
       background-image: linear-gradient(0deg, $palette--persian-green 0%, $palette--persian-green 100%);
       background-repeat: no-repeat;
       background-size: 100% 7px;
       background-position: 0 100%;
-      
+
       @media screen and (max-width: $mq--tablet) {
         background-size: 100% 4px;
       }
     }
-    
+
     [href="#highlight-orange"] {
       background-image: linear-gradient(0deg, $palette--tahiti-gold 0%, $palette--tahiti-gold 100%);
       background-repeat: no-repeat;
       background-size: 100% 7px;
       background-position: 0 100%;
-      
+
       @media screen and (max-width: $mq--tablet) {
         background-size: 100% 4px;
       }

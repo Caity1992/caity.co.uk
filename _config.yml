@@ -18,7 +18,7 @@ includes_dir: ./src/includes
 sass:
   sass_dir: ./src/scss
   style: compressed
-  
+
 exclude: [
   "CNAME",
   "Gemfile",
