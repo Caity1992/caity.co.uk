@@ -1,10 +1,6 @@
 .#{$prefix}-c-content {
   line-height: 1.8;
-  padding: 0 0 80px;
-
-  @media screen and (max-width: $mq--mobile) {
-    padding-bottom: 40px;
-  }
+  padding: 0 0 40px;
 
   @at-root #{&}__fragment {
     &:not(:first-child) {
