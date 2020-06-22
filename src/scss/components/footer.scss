@@ -12,6 +12,10 @@
   @at-root #{&}__container {
     background-color: $palette--parchment;
     padding: 30px;
+
+    @media screen and (max-width: $mq--tablet) {
+      padding: 10px 30px;
+    }
   }
 
   @at-root #{&}__flex {
@@ -43,7 +47,7 @@
     font-size: 14px;
 
     @media screen and (max-width: $mq--tablet) {
-      padding: 20px 0;
+      padding: 12px 0;
     }
 
     a {
