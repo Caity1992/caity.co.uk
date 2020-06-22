@@ -4,68 +4,68 @@
   padding: 10px 0 20px;
   margin: 0 auto;
   border-top: 2px solid $palette--tahiti-gold;
-  
+
   @media screen and (max-width: $mq--tablet) {
     max-width: 95%;
   }
-  
+
   @at-root #{&}__container {
     background-color: $palette--parchment;
-    padding: 30px 20px;
+    padding: 30px;
   }
-  
+
   @at-root #{&}__flex {
     display: flex;
     align-items: center;
-    
+
     @media screen and (max-width: $mq--tablet) {
       flex-wrap: wrap;
     }
   }
-  
+
   @at-root #{&}__content {
     font-size: 12px;
     width: 220px;
-    
+
     @media screen and (max-width: $mq--tablet) {
       width: 75%;
       text-align: center;
       margin: 0 auto;
     }
-    
+
     &--right {
       margin-left: auto;
     }
   }
-  
+
   @at-root #{&}__social {
     text-align: center;
     font-size: 14px;
-    
+
     @media screen and (max-width: $mq--tablet) {
       padding: 20px 0;
     }
-    
+
     a {
       text-decoration: none;
       color: $palette--black;
       position: relative;
       top: 10px;
-      
+
       &:hover {
         img {
           position: relative;
           top: -4px;
-          
+
           @media screen and (max-width: $mq--tablet) {
             top: 0;
           }
         }
-        
+
         [class*="__socialLabel"] {
           padding-bottom: 5px;
           border-color: $palette--tahiti-gold;
-          
+
           @media screen and (max-width: $mq--tablet) {
             padding-bottom: 0;
             border-color: $palette--transparent;
@@ -74,7 +74,7 @@
       }
     }
   }
-  
+
   @at-root #{&}__socialIcon {
     width: auto;
     height: 30px;
@@ -90,14 +90,14 @@
       transition: top 0.15s linear;
     }
   }
-  
+
   @at-root #{&}__socialLabel {
     font-weight: 600;
     display: inline-block;
     border-bottom: 3px solid $palette--transparent;
     padding-bottom: 10px;
     transition: padding-bottom 0.15s linear, border-color 0.15s linear;
-    
+
     @media screen and (max-width: $mq--tablet) {
       padding-bottom: 0;
       transition: none;

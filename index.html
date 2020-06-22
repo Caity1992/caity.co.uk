@@ -36,7 +36,7 @@ layout: default.base.page
     <div class="tm-c-footer__container">
       <div class="tm-g-grid--full tm-c-footer__flex">
         <div class="tm-g-column-3 tm-g-column-12@t">
-          <div class="tm-c-footer__content tm-c-footer__content--left">{{ site.data.footer.content.left | markdownify | remove: "<p>" | remove: "</p>" }}</div>
+          <div class="tm-c-footer__content tm-c-footer__content--left tm-u-typography__justify">{{ site.data.footer.content.left | markdownify | remove: "<p>" | remove: "</p>" }}</div>
         </div>
         <div class="tm-g-column-6 tm-g-column-12@t">
           <div class="tm-g-grid--full">
@@ -44,7 +44,7 @@ layout: default.base.page
               <div class="tm-c-footer__social">
                 <a href="{{ site.data.footer.social.mobile.link }}">
                   <div class="tm-c-footer__socialIcon">
-                    <img src="assets/img/mobile.svg" />
+                    <img src="assets/img/mobile.svg" alt="mobile icon" />
                   </div>
                   <div class="tm-c-footer__socialLabel">{{ site.data.footer.social.mobile.label }}</div>
                 </a>
@@ -52,9 +52,9 @@ layout: default.base.page
             </div>
             <div class="tm-g-column-4 tm-g-column-12@t">
               <div class="tm-c-footer__social">
-                <a href="{{ site.data.footer.social.email.link }}" target="_blank">
+                <a href="{{ site.data.footer.social.email.link }}" target="_blank" rel="noopener">
                   <div class="tm-c-footer__socialIcon">
-                    <img src="assets/img/email.svg" />
+                    <img src="assets/img/email.svg" alt="{{ site.data.footer.social.email.label }}" />
                   </div>
                   <div class="tm-c-footer__socialLabel">{{ site.data.footer.social.email.label }}</div>
                 </a>
@@ -62,9 +62,9 @@ layout: default.base.page
             </div>
             <div class="tm-g-column-4 tm-g-column-12@t">
               <div class="tm-c-footer__social">
-                <a href="{{ site.data.footer.social.linkedin.link }}" target="_blank">
+                <a href="{{ site.data.footer.social.linkedin.link }}" target="_blank" rel="noopener">
                   <div class="tm-c-footer__socialIcon">
-                    <img src="assets/img/linkedin.svg" />
+                    <img src="assets/img/linkedin.svg" alt="{{ site.data.footer.social.linkedin.label }}" />
                   </div>
                   <div class="tm-c-footer__socialLabel">{{ site.data.footer.social.linkedin.label }}</div>
                 </a>
@@ -73,7 +73,7 @@ layout: default.base.page
           </div>
         </div>
         <div class="tm-g-column-3 tm-g-column-12@t">
-          <div class="tm-c-footer__content tm-c-footer__content--right">{{ site.data.footer.content.right | markdownify | remove: "<p>" | remove: "</p>" }}</div>
+          <div class="tm-c-footer__content tm-c-footer__content--right tm-u-typography__justify">{{ site.data.footer.content.right | markdownify | remove: "<p>" | remove: "</p>" }}</div>
         </div>
       </div>
     </div>

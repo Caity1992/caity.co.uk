@@ -14,7 +14,8 @@
     <link rel="preconnect dns-prefetch" href="//fonts.googleapis.com" />
     <link rel="preconnect dns-prefetch" href="//fonts.gstatic.com" />
     <link rel="preconnect dns-prefetch" href="//www.google-analytics.com" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="preload" as="style" href="assets/css/main.css" onload="this.rel='stylesheet'" />
+    <link rel="icon" type="image/png" href="assets/favicons/favicon.png" />
   </head>
   <body>
     {{ content }}
